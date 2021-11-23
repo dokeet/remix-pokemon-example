@@ -15,7 +15,9 @@ export let loader: LoaderFunction = async () => {
     sprites,
   }));
   // https://remix.run/api/remix#json
-  return json(cleanData);
+  return json(cleanData, {
+    headers: { "Cache-Control": "max-age=60, stale-while-revalidate=3600" },
+  });
 };
 
 // https://remix.run/api/conventions#meta
