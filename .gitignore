@@ -1,0 +1,9 @@
+node_modules
+
+/.cache
+/server/build
+/public/build
+
+.vercel
+
+/styles/app.css
