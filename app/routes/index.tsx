@@ -15,12 +15,16 @@ export let loader: LoaderFunction = async () => {
     sprites,
   }));
   // https://remix.run/api/remix#json
-  return json(cleanData);
+  return json(cleanData, {
+    headers: {
+      "Cache-Control": "max-age=60, s-maxage=3600, stale-while-revalidate=3600",
+    },
+  });
 };
 
 export function headers() {
   return {
-    "Cache-Control": "max-age=60, s-maxage=3600, stale-while-revalidate=3600"
+    "Cache-Control": "max-age=60, s-maxage=3600, stale-while-revalidate=3600",
   };
 }
 
