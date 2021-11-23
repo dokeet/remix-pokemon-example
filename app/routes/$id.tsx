@@ -5,10 +5,15 @@ import invariant from "tiny-invariant";
 export let loader: LoaderFunction = async ({ params }) => {
   invariant(params.id, "params is required");
   const data = await getPokemon(params.id);
-  return json({
-    headers: { "Cache-Control": "max-age=60, stale-while-revalidate=3600" },
-  });
+  return json(data);
 };
+
+export function headers() {
+  return {
+    "Cache-Control": "max-age=60, s-maxage=3600, stale-while-revalidate=3600"
+  };
+}
+
 export default function JokeRoute() {
   const data = useLoaderData();
   return (
