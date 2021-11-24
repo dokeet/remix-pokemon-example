@@ -5,7 +5,7 @@
   "license": "",
   "scripts": {
     "build": "remix build",
-    "dev": "remix watch",
+    "dev": "npx concurrently 'remix watch' 'npm run watch:css'",
     "postinstall": "remix setup node",
     "start": "vercel dev",
     "watch:css": "npx tailwindcss -o app/styles/app.css --watch",
