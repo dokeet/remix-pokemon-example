@@ -6,4 +6,4 @@ node_modules
 
 .vercel
 
-/styles/app.css
+/app/styles/app.css
