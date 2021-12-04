@@ -1,5 +1,6 @@
 import * as React from "react";
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -7,8 +8,6 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
-  Link,
-  NavLink,
 } from "remix";
 import type { LinksFunction } from "remix";
 import styles from "./styles/app.css";
