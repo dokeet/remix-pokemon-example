@@ -1,4 +1,15 @@
-# Welcome to Remix!
+# Remix poke api example
+
+### Includes
+
+- Tailwind
+- All pokemon page
+- Single pokemon page
+
+
+# Remix Readme
+
+## Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)
 
